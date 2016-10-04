@@ -1,7 +1,15 @@
 @extends('welcome')
+
 @section('content')
-    <div class="top-right links">
-        <a href="{{ url('/login') }}">Login</a>
-        <a href="{{ url('/register') }}">Register</a>
-    </div>
-@endsection
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            @if()
+                {{-- Brand Image --}}
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="/assets/images/logo.png">
+                </a>
+            </div>
+        </div>
+    </nav>
+@stop

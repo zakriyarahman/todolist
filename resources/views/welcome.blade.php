@@ -1,10 +1,13 @@
 @extends('master')
-@section('content')
-	<div class="flex-center position-ref full-height">
-        @if (Route::has('login'))
-            @yield('navigationbar')
-        @endif
 
-        @yield('comingsoon')
+@section('content')
+    <div class="container">
+        @yield('navigationbar')
     </div>
-@endsection
+
+    <div class="content">
+        <div class="title m-b-md">
+            Something awesome coming soon!
+        </div>
+    </div>
+@stop

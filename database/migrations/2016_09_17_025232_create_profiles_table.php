@@ -19,7 +19,7 @@ class CreateProfilesTable extends Migration
             $table->integer('user_role_id')->unsigned()->index();
             $table->integer('valid_from');
             $table->integer('valid_to')->nullable();
-            $table->boolean('status');
+            $table->boolean('status')->default(true);
             
             $table->integer('creator')->unsigned()->index();
             $table->integer('created_at');

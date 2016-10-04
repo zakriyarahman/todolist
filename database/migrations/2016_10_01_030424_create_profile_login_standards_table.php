@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserRolesTable extends Migration
+class CreateProfileLoginStandardsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,18 @@ class CreateUserRolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_roles', function (Blueprint $table) {
+        Schema::create('profile_login_standards', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('label');
-            $table->string('description');
-            $table->boolean('status');
-            
-            $table->integer('creator')->unsigned()->index();
+            $table->integer('profile_id')->unsigned()->index();
+            $table->string('username');
+            $table->string('password');
+            $table->string('password_token')->nullable();
+
+            $table->integer('creator');
             $table->integer('created_at');
             $table->integer('updated_at');
-            $table->integer('deleted_at')->nullable();
+            $table->timestamps();
         });
-
     }
 
     /**
@@ -34,7 +34,6 @@ class CreateUserRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_roles');
+        Schema::dropIfExists('profile_login_standards');
     }
-
 }

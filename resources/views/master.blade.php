@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta   charset="utf-8">
+        <meta   http-equiv="X-UA-Compatible" 
+                content="IE=edge">
+        <meta   name="viewport" 
+                content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Hayamotors</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <link   href="https://fonts.googleapis.com/css?family=Raleway:100,600"
+                rel="stylesheet"
+                type="text/css">
+        <script src="http://code.jquery.com/jquery-3.1.1.js" 
+                integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" 
+                crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"
+                integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU"
+                crossorigin="anonymous">
+        </script>
         <!-- Styles -->
         <style>
             html, body {
@@ -65,6 +75,8 @@
         </style>
     </head>
     <body>
-        @yield('content')
+        <div class="container">
+            @yield('content')    
+        </div>
     </body>
 </html>

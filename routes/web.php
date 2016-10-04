@@ -11,8 +11,12 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::resource('/list', 'TodoListController');
+
+Route::get('/home', 'HomeController@index');
